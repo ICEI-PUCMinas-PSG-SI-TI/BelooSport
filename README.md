@@ -1,19 +1,23 @@
 # Informações do Projeto
-`TÍTULO DO PROJETO`  
+BelôSport 
 
 Trabalho Interdisciplinar - Aplicacões Web
 
-`CURSO`
+Análise e Desenvolvimento de Sistemas
 
-`SEMESTRE`
+2/2026
 
 ## Participantes
 
 Os membros do grupo são: 
-- Fulano da Silva
-- Ciclano Albuquerque
+- Carolina Bras
+- Clarissa Teixeira da
+Silva
+- Eduardo Santos
+- João Marcus Moraes 
+- Pedro Augsto Nogueira Oliveira.
 
-> Inclua a lista dos membros da equipe com seus nomes completos.
+
 
 # Estrutura do Projeto
 

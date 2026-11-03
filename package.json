@@ -1,0 +1,27 @@
+{
+  "name": "belosport",
+  "version": "1.0.0",
+  "description": "`TÍTULO DO PROJETO`",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ICEI-PUCMinas-PSG-SI-TI/BeloSport.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ICEI-PUCMinas-PSG-SI-TI/BeloSport/issues"
+  },
+  "homepage": "https://github.com/ICEI-PUCMinas-PSG-SI-TI/BeloSport#readme",
+  "devDependencies": {
+    "json-server": "^0.17.4"
+  }
+}

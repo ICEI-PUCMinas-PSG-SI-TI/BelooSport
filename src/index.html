@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BelôSport | Fale Conosco</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+
+        <div class="container cabecalho-conteudo">
+
+            <a href="#" class="logo">
+                <img src="image/logo-belosport.png" alt="Portal BelôSport">
+            </a>
+
+            <nav class="menu">
+                <a href="#">INÍCIO</a>
+                <a href="#">ESPORTES</a>
+                <a href="#">EVENTOS</a>
+                <a href="#">MAPA</a>
+                <a href="#">SOBRE</a>
+                <a href="#">INFORMAÇÕES</a>
+            </nav>
+
+            <a href="#forum" class="botao-chat">CHAT</a>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="container">
+
+        <!-- FALE CONOSCO -->
+        <section class="contato">
+
+            <h1>FALE COM O BELÔSPORT.</h1>
+
+            <p class="descricao">
+                Tem dúvidas, sugestões ou quer divulgar um evento?<br>
+                Estamos aqui para conversar.
+            </p>
+
+
+            <!-- FORMULÁRIO E NEWSLETTER -->
+            <div class="conteudo-principal">
+
+                <!-- FORMULÁRIO DE CONTATO -->
+                <form id="form-mensagem" class="formulario-contato">
+
+                    <label for="nome">Nome</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Nome"
+                        required
+                    >
+
+                    <label for="email">E-mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="E-mail"
+                        required
+                    >
+
+                    <label for="mensagem">Mensagem</label>
+                    <textarea
+                        id="mensagem"
+                        placeholder="Mensagem"
+                        required
+                    ></textarea>
+
+                    <button type="submit">ENVIAR MENSAGEM</button>
+
+                    <small>
+                        Seu nome ou e-mail não será compartilhado.
+                        Nunca envie senhas.
+                    </small>
+
+                </form>
+
+
+                <!-- COLUNA DA NEWSLETTER -->
+                <div class="coluna-newsletter">
+
+                    <aside class="newsletter">
+
+                        <h2>Assine nossa newsletter</h2>
+
+                        <form id="form-newsletter">
+
+                            <label for="email-newsletter">
+                                Insira seu e-mail
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email-newsletter"
+                                required
+                            >
+
+                            <button type="submit">Enviar</button>
+<small>
+    Seu nome ou e-mail não será compartilhado.
+</small>
+                        </form>
+
+                    </aside>
+
+                    <p class="frase-newsletter">
+                        juntos, por uma cidade<br>
+                        mais ativa.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FÓRUM COMUNITÁRIO -->
+        <section id="forum" class="forum">
+
+            <h2>Fórum Comunitário</h2>
+
+            <p>
+                Confira as mensagens e participe da comunidade BelôSport.
+            </p>
+
+            <div id="mensagens">
+                <!-- As mensagens serão carregadas pelo JavaScript -->
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <p>Belo Horizonte · MG</p>
+        </div>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
