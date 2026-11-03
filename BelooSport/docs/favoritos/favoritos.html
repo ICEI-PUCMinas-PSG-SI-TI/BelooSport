@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BelôSport - Descubra Esportes</title>
+</head>
+<body>
+    <header>
+        <h1>Portal BelôSport</h1>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Início</a></li>
+                <li><a href="esportes.html">Esportes</a></li>
+
+                <!--HYPERLINK PRINCIPAL-->
+                <li><a href="favoritos.html">Favoritos</a></li>
+
+                <li><a href="../mapa/mapa.html">Mapa</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="filtros">
+            <input type="text" placeholder="Buscar esporte...">
+            <button type="button">Todos</button>
+            <button type="button">Aventura</button>
+            <button type="button">Individual</button>
+            <button type="button">Coletivo</button>
+        </section>
+
+        <section class="vitrine-esportes">
+
+            <article class="card-esporte" data-id="skate">
+                <div class="card-imagem">
+                    <img src="skate.jpg" alt="Foto da prática de Skate">
+                    <button type="button" aria-label="Favoritar Skate">★</button>
+                </div>
+                <div class="card-info">
+                    <h3>Skate</h3>
+                    <p>Urbano · Adrenalina</p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 BelôSport</p>
+    </footer>
+    
+    <script src="favoritos.js"></script>
+</body>
+</html>
