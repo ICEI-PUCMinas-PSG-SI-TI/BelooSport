@@ -1,0 +1,51 @@
+{
+  "equipes": [
+    {
+      "id": 1,
+      "nome": "Ultimate BH",
+      "modalidade": "Ultimate Frisbee",
+      "responsavel": "Marcos Almeida",
+      "instagram": "@exemplo_ultimatebh",
+      "whatsapp": "(31) 91234-5678",
+      "donoId": "dono-exemplo-1",
+      "criadoEm": "2026-10-20T14:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "nome": "Peteca Pampulha",
+      "modalidade": "Peteca",
+      "responsavel": "Juliana Ribeiro",
+      "instagram": "@exemplo_petecapampulha",
+      "whatsapp": "(31) 98765-4321",
+      "donoId": "dono-exemplo-2",
+      "criadoEm": "2026-10-21T18:30:00.000Z"
+    },
+    {
+      "id": 3,
+      "nome": "Slackline Mineiro",
+      "modalidade": "Slackline",
+      "responsavel": "Rafael Duarte",
+      "instagram": "@exemplo_slacklinemg",
+      "whatsapp": "(31) 99876-5432",
+      "donoId": "dono-exemplo-3",
+      "criadoEm": "2026-10-22T10:15:00.000Z"
+    },
+    {
+      "nome": "feluma",
+      "modalidade": "football",
+      "responsavel": "clarissa",
+      "instagram": "@kl_clara4",
+      "whatsapp": "(31) 98949-8038",
+      "donoId": "dono-1793757427798-jwspemnc",
+      "criadoEm": "2026-11-04T02:02:39.678Z",
+      "id": 4
+    }
+  ],
+  "newsletter": [
+    {
+      "email": "claratds.so@gmail.com",
+      "dataInscricao": "2026-11-04T01:56:56.331Z",
+      "id": 1
+    }
+  ]
+}

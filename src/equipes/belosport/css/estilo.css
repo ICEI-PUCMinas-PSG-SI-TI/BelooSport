@@ -1,0 +1,409 @@
+:root {
+  --fundo: #fffcf0;
+  --texto: #121412;
+  --verde-escuro: #18371d;
+  --verde-botao: #315342;
+  --verde-newsletter: #395244;
+  --newsletter-mix: #5f7468;
+  --borda: #8e9b93;
+  --cinza-botao: #e8e9de;
+  --linha: #e4dfc8;
+  --vermelho: #a12a1f;
+  --fonte-menu: "Sailors", "Josefin Sans", sans-serif;
+  --fonte-titulo: "Beauty Salon Sans", "Josefin Sans", sans-serif;
+  --fonte-chamada: "Cormorant Garamond", Georgia, serif;
+  --fonte-texto: "Libre Baskerville", Georgia, serif;
+}
+
+body {
+  background-color: var(--fundo);
+  color: var(--texto);
+  font-family: var(--fonte-texto);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cabecalho {
+  border-bottom: 1px solid var(--linha);
+  margin: 0 auto;
+  max-width: 1320px;
+  width: 100%;
+}
+
+.logo {
+  height: 110px;
+  width: auto;
+}
+
+.navbar .nav-link {
+  font-family: var(--fonte-menu);
+  font-size: 1.09rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--texto);
+  padding: 0.5rem 0.9rem;
+}
+
+.navbar .nav-link:hover {
+  color: var(--verde-botao);
+}
+
+.navbar .nav-link.botao-equipes {
+  background-color: var(--verde-escuro);
+  color: #ffffff;
+  border-radius: 4px;
+  font-size: 1.06rem;
+  padding: 0.35rem 0.6rem;
+  margin-left: 0.6rem;
+}
+
+.navbar .nav-link.botao-equipes:hover {
+  background-color: var(--verde-botao);
+  color: #ffffff;
+}
+
+.principal {
+  flex: 1;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.titulo-fino {
+  font-family: var(--fonte-titulo);
+  font-weight: 300;
+  font-size: clamp(1.45rem, 4.5vw, 2.14rem);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--texto);
+  margin-bottom: 0;
+}
+
+.texto-chamada {
+  font-family: var(--fonte-chamada);
+  font-weight: 700;
+  font-size: clamp(1.45rem, 4vw, 1.95rem);
+  line-height: 1.2;
+  color: var(--texto);
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.botao-cadastrar {
+  display: inline-block;
+  background-color: var(--verde-botao);
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.17rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 1.6rem 1rem;
+  min-width: 13rem;
+  text-align: center;
+  border-radius: 999px;
+  transition: background-color 0.2s;
+}
+
+.botao-cadastrar:hover {
+  background-color: var(--verde-escuro);
+  color: #ffffff;
+}
+
+.cartao-newsletter {
+  margin-top: 3rem;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  padding: 1.25rem 1.2rem 0.9rem;
+  color: var(--newsletter-mix);
+}
+
+.cartao-newsletter h3 {
+  font-family: var(--fonte-texto);
+  font-weight: 400;
+  font-size: 1.35rem;
+  color: var(--verde-newsletter);
+  margin-bottom: 2rem;
+}
+
+.cartao-newsletter label {
+  font-size: 0.8rem;
+  color: var(--newsletter-mix);
+}
+
+.cartao-newsletter .form-control {
+  border-color: var(--borda);
+  background-color: transparent;
+  border-radius: 4px;
+  color: var(--verde-newsletter);
+}
+
+.botao-enviar {
+  display: block;
+  width: 100%;
+  margin-top: 4.2rem;
+  padding: 0.5rem;
+  border: 0;
+  border-radius: 6px;
+  background-color: var(--cinza-botao);
+  color: var(--verde-newsletter);
+  font-family: var(--fonte-texto);
+  font-size: 1rem;
+}
+
+.botao-enviar:hover {
+  background-color: #d9dccd;
+}
+
+.nota-newsletter {
+  font-size: 0.62rem;
+  text-align: center;
+  color: var(--newsletter-mix);
+  margin: 0.5rem 0 0;
+}
+
+.rodape {
+  margin: 0 auto;
+  max-width: 1320px;
+  width: 100%;
+  border-top: 1px solid var(--linha);
+  padding: 0.9rem 1rem;
+  text-align: right;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+  color: #6b6f6b;
+}
+
+.cartao-formulario {
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: #fffef8;
+}
+
+.cartao-formulario .form-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--verde-newsletter);
+}
+
+.cartao-formulario .form-control {
+  border-color: var(--borda);
+  background-color: #ffffff;
+  font-family: var(--fonte-texto);
+  font-size: 0.9rem;
+}
+
+.cartao-formulario .form-control:focus {
+  border-color: var(--verde-botao);
+  box-shadow: 0 0 0 0.2rem rgba(49, 83, 66, 0.2);
+}
+
+.selo-modo {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border: 1.5px solid var(--verde-botao);
+  border-radius: 999px;
+  background-color: #e4efe8;
+  color: var(--verde-botao);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.selo-modo.editando {
+  background-color: #fbe9c8;
+  border-color: #9a6a12;
+  color: #7a520c;
+}
+
+.botao-pilula {
+  border: 2px solid var(--verde-botao);
+  border-radius: 999px;
+  padding: 0.7rem 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  background-color: var(--verde-botao);
+  color: #ffffff;
+}
+
+.botao-pilula:hover {
+  background-color: var(--verde-escuro);
+  border-color: var(--verde-escuro);
+  color: #ffffff;
+}
+
+.botao-pilula.contorno {
+  background-color: transparent;
+  color: var(--verde-botao);
+}
+
+.botao-pilula.contorno:hover {
+  background-color: var(--verde-botao);
+  color: #ffffff;
+}
+
+.tabela-equipes {
+  font-size: 0.85rem;
+  margin-bottom: 0;
+  --bs-table-bg: #fffef8;
+}
+
+.tabela-equipes thead th {
+  background-color: #ede7d0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tabela-equipes thead th.coluna-acoes {
+  background-color: #d5e8db;
+  color: var(--verde-botao);
+}
+
+.tabela-equipes tbody tr.linha-minha {
+  background-color: #eef5f0;
+}
+
+.tabela-equipes td {
+  vertical-align: middle;
+}
+
+.tabela-equipes a {
+  color: var(--verde-botao);
+}
+
+.botao-editar,
+.botao-excluir {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background-color: #fffef8;
+  border-width: 1.5px;
+  border-style: solid;
+  border-radius: 6px;
+  padding: 0.35rem 0.7rem;
+}
+
+.botao-editar {
+  border-color: var(--verde-botao);
+  color: var(--verde-botao);
+}
+
+.botao-editar:hover:not(:disabled) {
+  background-color: var(--verde-botao);
+  color: #ffffff;
+}
+
+.botao-excluir {
+  border-color: var(--vermelho);
+  color: var(--vermelho);
+}
+
+.botao-excluir:hover:not(:disabled) {
+  background-color: var(--vermelho);
+  color: #ffffff;
+}
+
+.botao-editar:disabled,
+.botao-excluir:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.selo-minha {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 4px;
+  background-color: var(--verde-botao);
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+.cartao-equipe {
+  height: 100%;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  background-color: #fffef8;
+}
+
+.cartao-equipe.minha {
+  border-color: var(--verde-botao);
+  border-width: 2px;
+}
+
+.cartao-equipe .card-title {
+  font-family: var(--fonte-chamada);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.selo-modalidade {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background-color: #e4efe8;
+  color: var(--verde-botao);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.cartao-equipe a {
+  color: var(--verde-botao);
+  font-size: 0.85rem;
+}
+
+.barra-filtros {
+  border: 1px solid var(--linha);
+  border-radius: 8px;
+  background-color: #fffef8;
+  padding: 1rem;
+}
+
+.barra-filtros .form-control,
+.barra-filtros .form-select {
+  border-color: var(--borda);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 991.98px) {
+  .logo {
+    height: 80px;
+  }
+
+  .navbar .nav-link {
+    padding: 0.6rem 0.2rem;
+  }
+
+  .navbar .nav-link.botao-equipes {
+    display: inline-block;
+    margin-left: 0;
+    margin-top: 0.4rem;
+  }
+
+  .principal {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .texto-chamada {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .cartao-newsletter {
+    margin-top: 1.5rem;
+  }
+
+  .botao-enviar {
+    margin-top: 2.5rem;
+  }
+}
