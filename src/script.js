@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-   
+    
     const btnInicio = document.getElementById("btn-menu-inicio");
     const btnEsportes = document.getElementById("btn-menu-esportes");
     const btnExplorar = document.getElementById("btn-explorar");
@@ -9,15 +9,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const secaoEsportes = document.getElementById("secao-esportes");
     const todosLinksNav = document.querySelectorAll(".nav-destaque");
 
+    const inputBusca = document.getElementById("input-busca");
+    const botoesFiltro = document.querySelectorAll(".btn-filtro");
+    
+    
+    const cardsEsportes = document.querySelectorAll(".card-esporte, .card-esporte-animado");
+
     
     function navegarPara(secaoDestino, linkAtivo) {
-        
         secaoInicio.classList.add("d-none");
         secaoEsportes.classList.add("d-none");
         
-        
         todosLinksNav.forEach(link => link.classList.remove("ativo"));
-        
         
         secaoDestino.classList.remove("d-none");
         if (linkAtivo) {
@@ -25,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    
+   
     btnInicio.addEventListener("click", (e) => {
         e.preventDefault();
         navegarPara(secaoInicio, btnInicio);
@@ -42,12 +45,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     
-    const botoesFiltro = document.querySelectorAll(".btn-filtro");
-    const cardsEsportes = document.querySelectorAll(".card-esporte");
+    if (inputBusca) {
+        inputBusca.addEventListener("input", function() {
+            const termoDigitado = this.value.toLowerCase().trim();
 
+            cardsEsportes.forEach(card => {
+                const tituloElement = card.querySelector(".titulo-card");
+                
+                if (tituloElement) {
+                    const nomeEsporte = tituloElement.textContent.toLowerCase();
+                    
+                    if (nomeEsporte.includes(termoDigitado)) {
+                        card.classList.remove("d-none");
+                    } else {
+                        card.classList.add("d-none");
+                    }
+                }
+            });
+
+            
+            botoesFiltro.forEach(b => b.classList.remove("ativo"));
+            const btnTodos = document.querySelector('[data-filtro="todos"]');
+            if (btnTodos) btnTodos.classList.add("ativo");
+        });
+    }
+
+    
     botoesFiltro.forEach(botao => {
         botao.addEventListener("click", function() {
-            
             
             botoesFiltro.forEach(b => b.classList.remove("ativo"));
             this.classList.add("ativo");
@@ -56,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             
             cardsEsportes.forEach(card => {
-                const categoriasDoCard = card.getAttribute("data-categoria");
+                const categoriasDoCard = card.getAttribute("data-categoria") || "";
                 
                 if (filtroEscolhido === "todos" || categoriasDoCard.includes(filtroEscolhido)) {
                     card.classList.remove("d-none");
@@ -64,6 +89,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     card.classList.add("d-none");
                 }
             });
+
+            
+            if (inputBusca) {
+                inputBusca.value = "";
+            }
         });
     });
 });
