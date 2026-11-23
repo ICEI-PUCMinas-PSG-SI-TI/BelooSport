@@ -7,7 +7,10 @@ function lerFormulario() {
     modalidade: document.getElementById("campoModalidade").value.trim(),
     responsavel: document.getElementById("campoResponsavel").value.trim(),
     instagram: document.getElementById("campoInstagram").value.trim().replace(/\s/g, ""),
-    whatsapp: document.getElementById("campoWhatsapp").value.trim()
+    whatsapp: document.getElementById("campoWhatsapp").value.trim(),
+    localRegiao: document.getElementById("campoLocalRegiao").value.trim(),
+    perfilIniciante: document.getElementById("campoPerfilIniciante").value.trim(),
+    gratuidadeRegras: document.getElementById("campoGratuidadeRegras").value.trim()
   };
 }
 
@@ -38,6 +41,15 @@ function validarDados(dados) {
   const digitos = dados.whatsapp.replace(/\D/g, "");
   if (dados.whatsapp !== "" && digitos.length !== 10 && digitos.length !== 11) {
     return { campo: "campoWhatsapp", texto: "WhatsApp inválido. Digite o DDD e o número (exemplo: (31) 91234-5678)." };
+  }
+  if (dados.localRegiao.length < 3) {
+    return { campo: "campoLocalRegiao", texto: "Informe o local de treino e a região de BH." };
+  }
+  if (dados.perfilIniciante.length < 3) {
+    return { campo: "campoPerfilIniciante", texto: "Informe os detalhes para iniciantes, aula experimental e intensidade." };
+  }
+  if (dados.gratuidadeRegras.length < 3) {
+    return { campo: "campoGratuidadeRegras", texto: "Informe sobre gratuidade, regras e potencial de apoio." };
   }
   return null;
 }
@@ -87,7 +99,7 @@ function desenharTabela() {
   if (listaEquipes.length === 0) {
     const linhaVazia = criarElemento("tr");
     const celulaVazia = criarElemento("td", "text-center text-secondary py-4", "Nenhuma equipe cadastrada ainda. Use o formulário acima para cadastrar a primeira!");
-    celulaVazia.colSpan = 6;
+    celulaVazia.colSpan = 7;
     linhaVazia.appendChild(celulaVazia);
     corpo.appendChild(linhaVazia);
     return;
@@ -112,7 +124,9 @@ function desenharTabela() {
     const celulaWhatsapp = criarElemento("td");
     celulaWhatsapp.appendChild(criarLinkWhatsapp(equipe.whatsapp));
     linha.appendChild(celulaWhatsapp);
-
+    
+    const textoDetalhes = [equipe.localRegiao, equipe.perfilIniciante, equipe.gratuidadeRegras].filter(Boolean).join(" | ") || "-";
+    linha.appendChild(criarElemento("td", "small", textoDetalhes));
     const celulaAcoes = criarElemento("td");
     const grupo = criarElemento("div", "d-flex gap-2");
     const botaoEditar = criarElemento("button", "botao-editar", "Editar");
@@ -231,7 +245,9 @@ function editarEquipe(id) {
   document.getElementById("campoResponsavel").value = equipe.responsavel;
   document.getElementById("campoInstagram").value = equipe.instagram || "";
   document.getElementById("campoWhatsapp").value = equipe.whatsapp || "";
-
+  document.getElementById("campoLocalRegiao").value = equipe.localRegiao || "";
+  document.getElementById("campoPerfilIniciante").value = equipe.perfilIniciante || "";
+  document.getElementById("campoGratuidadeRegras").value = equipe.gratuidadeRegras || ""; 
   idEmEdicao = id;
   atualizarModoFormulario();
   document.getElementById("formEquipe").scrollIntoView({ behavior: "smooth", block: "center" });

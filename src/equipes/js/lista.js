@@ -75,6 +75,15 @@ function desenharVitrine() {
     corpo.appendChild(titulo);
     corpo.appendChild(criarElemento("span", "selo-modalidade align-self-start", equipe.modalidade));
     corpo.appendChild(criarElemento("p", "mb-1 small", "Responsável: " + equipe.responsavel));
+    if (equipe.localRegiao) {
+      corpo.appendChild(criarElemento("p", "mb-1 small", "Local e Região: " + equipe.localRegiao));
+    }
+    if (equipe.perfilIniciante) {
+      corpo.appendChild(criarElemento("p", "mb-1 small", "Iniciantes e Treino: " + equipe.perfilIniciante));
+    }
+    if (equipe.gratuidadeRegras) {
+      corpo.appendChild(criarElemento("p", "mb-1 small", "Gratuidade e Regras: " + equipe.gratuidadeRegras));
+    }
 
     const contatos = criarElemento("div", "d-flex flex-column gap-1 mt-auto");
     const linhaInstagram = criarElemento("div", "", "Instagram: ");
