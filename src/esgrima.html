@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esgrima | BelôSport</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="modalidade.css">
+</head>
+<body>
+
+  
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="img/logo.png" alt="Logo BelôSport">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="index.html#esportes" class="active">Esportes</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="mapa.html">Mapa</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="informacoes.html">Informações</a></li>
+      </ul>
+      <a href="cadastre-equipe.html" class="btn-cadastrar">Cadastre Equipe</a>
+    </div>
+  </nav>
+
+  
+  <header class="sport-hero">
+    <div class="container hero-grid">
+      <div>
+        <nav class="breadcrumb">
+          <a href="index.html">Início</a> &gt; <a href="index.html#esportes">Esportes</a> &gt; Esgrima
+        </nav>
+        <span class="sport-tag">Individual • Precisão</span>
+        <h1 class="display-title hero-title">Esgrima</h1>
+        <p class="hero-subtitle">Reflexos rápidos, estratégia milimétrica e tradição olímpica e histórica nas pistas de Belo Horizonte.</p>
+      </div>
+      <img src="../docs/images/EsgrimaCapa.webp" alt="Praticantes de Esgrima" class="hero-image">
+    </div>
+  </header>
+
+  
+  <section class="about-section">
+    <div class="container about-grid">
+      <h2 class="display-title section-heading">O que é a Esgrima?</h2>
+      <div class="about-text">
+        <p>
+          Presente em todas as edições dos Jogos Olímpicos modernos, a esgrima é um esporte de combate em que dois atletas duelam sobre uma pista com o objetivo de tocar o oponente antes de serem tocados. Na vertente olímpica divide-se em <strong>florete</strong>, <strong>espada</strong> e <strong>sabre</strong>, além das vertentes históricas (HEMA) e de rapieira praticadas na capital.
+        </p>
+        <p>
+          Conhecida como "xadrez físico", desenvolve coordenação motora, agilidade de pernas e tomada rápida de decisão. Nas escolas e salas de armas de Belo Horizonte, os alunos iniciantes contam com equipamentos emprestados durante as primeiras aulas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="video-section">
+    <div class="container">
+      <div class="video-box">
+        <h2 class="display-title section-heading">Conheça a Modalidade</h2>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/2EYaHlaheF0" title="Vídeo Esgrima" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="teams-section">
+    <div class="container">
+      <div class="teams-header">
+        <h2 class="display-title section-heading">Escolas e Salas em Belo Horizonte</h2>
+        <p>Clique no card para acessar o Instagram oficial e conhecer as turmas iniciantes e adultas.</p>
+      </div>
+
+      <div class="teams-grid">
+        
+        <a href="https://www.instagram.com/portadiferrobh/" target="_blank" rel="noopener" class="team-card">
+          <img src="../docs/images/PortadiFerro.png" alt="Porta di Ferro Esgrima Histórica" class="team-photo">
+          <div class="team-body">
+            <h3 class="team-name">Porta di Ferro Esgrima Histórica</h3>
+            <p class="team-meta">Dona Clara • @portadiferrobh</p>
+            <p class="team-address">Av. Sebastião de Brito, 255</p>
+          </div>
+          <div class="team-footer">
+            <div class="status-slot">
+              <span class="ig-cta-label">Visitar perfil no Instagram</span>
+            </div>
+            <div class="ig-slot" title="Abrir Instagram">
+              <span class="ig-badge-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        
+        <a href="https://www.instagram.com/esgrimarapier/" target="_blank" rel="noopener" class="team-card">
+          <img src="../docs/images/EsgrimaRapier.png" alt="Esgrima Rapier" class="team-photo team-photo--logo">
+          <div class="team-body">
+            <h3 class="team-name">Esgrima Rapier</h3>
+            <p class="team-meta">Carmo • @esgrimarapier</p>
+            <p class="team-address">Rua Passa Tempo, 562/301</p>
+          </div>
+          <div class="team-footer">
+            <div class="status-slot">
+              <span class="ig-cta-label">Visitar perfil no Instagram</span>
+            </div>
+            <div class="ig-slot" title="Abrir Instagram">
+              <span class="ig-badge-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+       
+        <a href="https://www.instagram.com/rgesgrima/" target="_blank" rel="noopener" class="team-card">
+          <img src="../docs/images/Romão.png" alt="Romão Gomes Esgrima" class="team-photo">
+          <div class="team-body">
+            <h3 class="team-name">Romão Gomes Esgrima</h3>
+            <p class="team-meta">Gutierrez • @rgesgrima</p>
+            <p class="team-address">Av. Raja Gabáglia, 350 (Círculo Militar)</p>
+          </div>
+          <div class="team-footer">
+            <div class="status-slot">
+              <span class="ig-cta-label">Visitar perfil no Instagram</span>
+            </div>
+            <div class="ig-slot" title="Abrir Instagram">
+              <span class="ig-badge-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="map-section">
+    <div class="container">
+      <h2 class="display-title section-heading">Locais de Treino</h2>
+      <div class="map-container" id="mapa" data-esporte="esgrima"></div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="mapa.js"></script>
+</body>
+</html>
