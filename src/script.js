@@ -96,4 +96,11 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    if (window.location.hash === '#esportes') {
+    document.getElementById('secao-inicio')?.classList.add('d-none');
+    document.getElementById('secao-esportes')?.classList.remove('d-none');
+    document.getElementById('btn-menu-inicio')?.classList.remove('ativo');
+    document.getElementById('btn-menu-esportes')?.classList.add('ativo');
+}
 });
